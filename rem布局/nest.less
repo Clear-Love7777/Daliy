@@ -1,0 +1,23 @@
+.header{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    //less嵌套 子元素可以直接写在父元素里面
+    a{
+        color: red;
+        // 伪类、伪元素选择器、交集选择器的前面要加&符号 否则默认是后代
+        &:hover{
+            color: hotpink;
+        }
+    }
+}
+.nav{
+    .logo{
+        color: green;
+    }
+    &::before{
+        content: "";
+    }
+}
+
+
