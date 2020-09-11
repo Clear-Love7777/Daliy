@@ -43,6 +43,7 @@
             <td>{{item.name}}</td>
             <td>{{item.date}}</td>
             <td>
+              <!-- prevent禁用a标签默认的跳转行为 -->
               <a href="" @click.prevent>修改</a>
               <span>|</span>
               <a href="" @click.prevent>删除</a>
@@ -59,7 +60,28 @@
       注意事项：<a href="" @click.prevent>修改</a>
       事件绑定时，可以只添加修饰符，而不绑定事件函数
     */
-
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        books: [{
+          id: 1,
+          name: '三国演义',
+          date: ''
+        },{
+          id: 2,
+          name: '水浒传',
+          date: ''
+        },{
+          id: 3,
+          name: '红楼梦',
+          date: ''
+        },{
+          id: 4,
+          name: '西游记',
+          date: ''
+        }]
+      }
+    });
   </script>
 </body>
 </html>

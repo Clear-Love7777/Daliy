@@ -32,13 +32,17 @@
         }
       },
     });
-    // vm.list[1] = 'lemon';
+    // vm.list[1] = 'lemon'; 
     // Vue.set(vm.list, 2, 'lemon');
-    vm.$set(vm.list, 1, 'lemon');
+    // 1.vm.set(vm.items, indexOfltem, newValue);
+    // 2.vm.$set(vm.items, indexOfltem, newValue);
+    // 参数1：处理的数组名称
+    // 参数2：处理的数组的索引
+    // 参数3：处理的数组的值
+     vm.$set(vm.list,1,'lemon');
 
     // vm.info.gender = 'male';
     vm.$set(vm.info, 'gender', 'female');
-
     
   </script>
 </body>
