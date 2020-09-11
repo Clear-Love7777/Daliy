@@ -26,18 +26,18 @@
           
         }
       },
-      directives: {
-        color: {
-          bind: function(el, binding){
-            el.style.backgroundColor = binding.value.color;
-          }
-        },
-        focus: {
-          inserted: function(el) {
-            el.focus();
-          }
-        }
-      }
+       directives:{
+         color:{
+           bind:function(el,binding){
+             el.style.backgroundColor = binding.value.color;
+           }
+         },
+         focus:{
+           inserted:function(el){
+             el.focus();
+           }
+         }
+       } 
     });
   </script>
 </body>
