@@ -32,6 +32,7 @@
       const router = new VueRouter({
         // 所有的路由规则
         routes: [
+          // redirect路由重定向
           { path: '/', redirect: '/user'},
           { path: '/user', component: User },
           { path: '/register', component: Register }
