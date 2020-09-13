@@ -13,9 +13,50 @@ app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Headers', 'mytoken');
   next();
 });
+// async
+app.get('/async1', (req, res) => {
+  res.send('hello')
+})
+app.get('/async2', (req, res) => {
+  if(req.query.info == 'hello'){
+    res.send('world');
+  }else{
+    res.send('error');
+  }
+})
 
+// axios
+app.get('/adata', (req, res) => {
+  res.send('Hello axios!')
+})
+app.get('/axios', (req, res) => {
+  res.send(' axios get传递参数!' + req.query.id)
+})
+app.delete('/axios', (req, res) => {
+  res.send(' axios delete传递参数!' + req.query.id)
+})
+app.get('/axios/:id', (req, res) => {
+  res.send(' axios get(Restful)传递参数!' + req.params.id)
+})
+app.get('/axios/:id', (req, res) => {
+  res.send(' axios get(Restful)传递参数!' + req.params.id)
+})
+app.post('/axios', (req, res) => {
+  res.send(' axios post传递参数!' + req.body.uname+ '---'+ req.body.pwd)
+})
+app.put('/axios/:id', (req, res) => {
+  res.send(' axios put传递参数!' + req.body.uname+ '---'+ req.body.pwd)
+})
+app.get('/axios-json', (req, res) => {
+  res.json({
+    uname:'lisi',
+    age:14
+  });
+})
+// fetch
 app.get('/fdata', (req, res) => {
   res.send('Hello fetch!')
 })
