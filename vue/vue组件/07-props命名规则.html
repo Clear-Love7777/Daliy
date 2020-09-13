@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="app">
+    <div>{{pmsg}}</div>
+    <!-- 在props中使用驼峰形式，在模板中需要使用短横线的形式 -->
+    <menu-item :menu-title='ptitle'></menu-item>
+</div>
+<body>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+    // 在字符串形式的模板没有这个限制
+    Vue.component('third-com',{
+       props:['testTitle'],
+       template:'<div>{{testTitle}}</div>'
+   });
+   Vue.component('menu-item',{
+       props:['menuTitle'],
+       template:'<div>{{menuTitle}}<third-com testTitle="hello"></third-com></div>'
+   });
+   var vm = new Vue({
+     el:'#app',
+     data:{
+         pmsg:'父组件内容',
+         ptitle:'动态绑定属性'
+     }
+   });
+
+</script>
+</body>
+</html>

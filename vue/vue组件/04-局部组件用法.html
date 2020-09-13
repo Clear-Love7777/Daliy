@@ -20,7 +20,7 @@
     Vue.component('test-com',{
       template: '<div>Test<hello-world></hello-world></div>'
     });
-    var HelloWorld = {
+    var HelloWorld = { 
       data: function(){
         return {
           msg: 'HelloWorld'
@@ -49,6 +49,7 @@
       data: {
         
       },
+      //局部组件注册
       components: {
         'hello-world': HelloWorld,
         'hello-tom': HelloTom,
