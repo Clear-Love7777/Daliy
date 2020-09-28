@@ -178,6 +178,8 @@ export default {
         usename: '',
         password: '',
         email: '',
+        account:'',
+        status:'',
         mobile: '',
       },
       //   添加表单的验证规则对象
