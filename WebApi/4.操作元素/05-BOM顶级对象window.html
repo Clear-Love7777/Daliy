@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //BOM 浏览器对象模型  核心对象是window   比DOM大
+        // window.document.querySelector()
+        var num = 10;
+        console.log(num);
+        console.log(window.num);
+
+        function fn() {
+            console.log(11);
+
+        }
+        fn();
+        window.fn();
+        // alert(11);
+        // window.alert(11)
+        console.dir(window);
+        // var name = 10;  声明对象不要用name 因为window有name 会有异议
+        console.log(window.name);
+    </script>
+</body>
+
+</html>

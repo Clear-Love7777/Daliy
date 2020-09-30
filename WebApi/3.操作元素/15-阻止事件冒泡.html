@@ -40,7 +40,12 @@
             e.stopPropagation(); // stop 停止  Propagation 传播
             e.cancelBubble = true; // 非标准 cancel 取消 bubble 泡泡
         }, false);
-
+        //阻止事件冒泡兼容性解决方案
+        //   if(e && e.stopPropagation){
+        //       e.stopPropagation();
+        //   }else{
+        //       window.event.cancelBubble = true;
+        //   }
         var father = document.querySelector('.father');
         father.addEventListener('click', function() {
             alert('father');
