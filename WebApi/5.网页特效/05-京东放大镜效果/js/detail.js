@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     // 1. 当我们鼠标经过 preview_img 就显示和隐藏 mask 遮挡层 和 big 大盒子
     preview_img.addEventListener('mouseover', function() {
         mask.style.display = 'block';
-        big.style.display = 'block';
+        big.style.display = 'block';     
     })
     preview_img.addEventListener('mouseout', function() {
             mask.style.display = 'none';

@@ -19,11 +19,16 @@
 <body>
     <div class="box" style="width: 200px;"></div>
     <script>
-        // offset与style的区别
+        //   offset     与             style的区别
+        //1.任意样式表的样式值         只能得到行内样式表
+        //2.数值没有单位               有单位的字符串
+        //3.offsetWidth包含padding+border+width   style.width不包含padding+border
+        //4.offsetWidth只能获取不能赋值，只读属性    style.width都可以
+        //获取大小位置offset 改值style         
         var box = document.querySelector('.box');
         console.log(box.offsetWidth);
         console.log(box.style.width);
-        // box.offsetWidth = '300px';
+        // box.offsetWidth = '300px';  改不了
         box.style.width = '300px';
     </script>
 </body>
