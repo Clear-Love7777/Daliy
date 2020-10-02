@@ -20,6 +20,7 @@ window.addEventListener('load', function() {
         }, 2000);
     });
     // 3. 动态生成小圆圈  有几张图片，我就生成几个小圆圈
+    //ul太多 选择focus里的ul
     var ul = focus.querySelector('ul');
     var ol = focus.querySelector('.circle');
     // console.log(ul.children.length);
@@ -53,6 +54,7 @@ window.addEventListener('load', function() {
             animate(ul, -index * focusWidth);
         })
     }
+    
     // 把ol里面的第一个小li设置类名为 current
     ol.children[0].className = 'current';
     // 6. 克隆第一张图片(li)放到ul 最后面
