@@ -24,7 +24,7 @@ export default {
       this.sub()
     },
       btnHandler2(){
-      this.subN(3)
+      this.subN(4)
     },
   }
 }
