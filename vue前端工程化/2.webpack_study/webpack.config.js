@@ -8,7 +8,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   // 编译模式
   mode: 'development', // development  production
+  // 打包入口
   entry: path.join(__dirname, './src/index.js'),
+  // 输出
   output: {
     path: path.join(__dirname, './dist'), // 输出文件的存放路径
     filename: 'bundle.js' // 输出文件的名称
