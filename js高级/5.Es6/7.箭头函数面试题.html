@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数面试题</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var age = 100;
+//   obj是对象 不产生作用域  所以this指向的是window
+		var obj = {
+			age: 20,
+			say: () => {
+				alert(this.age)
+			}
+		}
+
+		obj.say();
+	</script>
+</body>
+</html>

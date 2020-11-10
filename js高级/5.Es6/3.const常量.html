@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+    // if(true){
+    // 1.使用const关键字声明的常量具有块级作用域
+    //     const a = 10;
+    //     if(true){
+    //         const a = 20;
+    //         console.log(a);   //20
+    //     } 
+    //     console.log(a);      //10
+    // }
+    // console.log(a);   //报错
+    // 2.使用cons常量必须赋初始值
+    // const PI = 3.14;
+    // 3.常量赋值后 值不能更改
+    const PI = 3.14;
+    //  PI = 100;  //报错 Assignment to constant variable.
+    const ary = [100,200];
+    ary[0] = 123;
+    console.log(ary); 
+    </script>
+</body>
+</html>
