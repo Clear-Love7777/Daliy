@@ -1,0 +1,29 @@
+<!-- 1. opacity属性 -->
+<div class="hide1">111</div>
+<!-- 视觉上消失，但依然占据空间，并对网页的布局起作用。它也将响应用户交互。添加了opacity属性的元素,它的背景和元素内容也是会跟着变化的。
+可以利用此属性实现一些动画，如淡入淡出等
+该属性是兼容IE9以上的浏览器，IE8 以及更早的版本支持替代的 filter 属性，例如：filter:Alpha(opacity=50)。 -->
+
+<!-- 2. display属性 -->
+<div class="hide2">222</div>
+<!-- display属性才是真正意义上的隐藏元素,当元素的display属性为none时,该元素就会从视觉中消失,并且连盒模型也不生成.也不会在页面占据任何位置,
+不但如此,就连它的子元素也会一同从盒子模型中消失。
+给他和它的子元素添加的任何动画效果交互效果都会不起作用 -->
+
+<!-- 3. visibility属性 -->
+<div class="hide3">333</div>
+<!-- visibility属性类似opacity属性，该属性值为hidden的时候，元素将会隐藏，也会占据着自己的位置，并对网页的布局起作用，
+与 opacity 唯一不同的是它不会响应任何用户交互。
+能够实现动画效果，只要它的初始和结束状态不一样。这确保了 visibility 状态切换之间的过渡动画可以是时间平滑的。 -->
+
+<style>
+    .hide1{
+    opacity:0;
+}
+.hide2{
+    display:none;
+}
+.hide3{
+    visibility:hidden;
+}
+</style>

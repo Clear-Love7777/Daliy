@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 第一种方法 -->
+<div class="fahter">
+    <div class="big">big</div>
+    <div class="small">small</div>
+    <div class="clear">额外标签法</div>
+</div>
+<div class="footer"></div>
+
+<!-- 第二种方法 -->
+<div class="fahter">
+    <div class="big">big</div>
+    <div class="small">small</div>
+</div>
+<div class="footer"></div>
+
+<!-- 第三种方法 -->
+<div class="fahter clearfix">
+    <div class="big">big</div>
+    <div class="small">small</div>
+</div>
+<div class="footer"></div>
+
+<!-- 第四种方法 -->
+<div class="fahter clearfix">
+    <div class="big">big</div>
+    <div class="small">small</div>
+</div>
+<div class="footer"></div>
+<style>
+/* 1.clear:both; */
+.clear{
+    clear:both;
+}
+/* 2.overflow: hidden; */ 
+.fahter{
+    width: 400px;
+    border: 1px solid deeppink;
+    overflow: hidden;
+}
+/* 3.使用after伪元素清除浮动 */
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+} 
+.clearfix{
+    *zoom:1;
+}
+/* 4.使用before和after双伪元素清除浮动 display: table; 让块级标签实现行内效果，即浮动至同一横轴，并实现等高效果 */
+.clearfix:after,.clearfix:before{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+} 
+.clearfix{
+    *zoom:1;
+}
+
+.fahter{
+    width: 400px;
+    border: 1px solid deeppink;
+}
+.big{
+    width: 200px;
+    height: 200px;
+    background: darkorange;
+    float: left;
+}
+.small{
+    width: 120px;
+    height: 120px;
+    background: darkmagenta;
+    float: left;
+}
+.footer{
+    width: 900px;
+    height: 100px;
+    background: darkslateblue;
+}
+</style>
+</body>
+</html>

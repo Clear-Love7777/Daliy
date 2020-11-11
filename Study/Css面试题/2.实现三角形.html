@@ -1,0 +1,20 @@
+<div class="box1"></div>
+<div class="box2"></div>
+<style>
+ /* 利用border */
+.box1{
+    width: 0;
+    height: 0;
+    border-width:40px 40px 0;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+/* 利用渐进线 */
+.box2{
+    width: 40px;
+    height: 40px;  
+    background: linear-gradient(to bottom right, red 50%, transparent 0);
+    transform: rotate(45deg);
+} 
+</style>
